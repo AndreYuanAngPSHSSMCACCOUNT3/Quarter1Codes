@@ -1,0 +1,15 @@
+# Ask the user for each part of the name separately
+first_name = input("Enter your first name: ").strip()
+middle_name = input("Enter your middle name: ").strip()
+last_name = input("Enter your last name: ").strip()
+
+# Capitalize the first letter of each name
+first_name = first_name.capitalize()
+middle_initial = middle_name[0].upper() + '.' if middle_name else ''
+last_name = ' '.join([word.capitalize() for word in last_name.split()])
+
+# Format the final name
+formatted_name = f"{last_name}, {first_name} {middle_initial}"
+
+# Display the result
+print("Formatted Name:", formatted_name)
